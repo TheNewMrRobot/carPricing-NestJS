@@ -14,6 +14,7 @@ import { Report } from './reports/reports.entity';
       // After added the entity in users module , import the Entity and Add Here
       // This should add the Repository By Default
       entities: [User, Report],
+      // Take all the structure from the Entity and update the DB structure
       synchronize: true,
     }),
     UsersModule,
