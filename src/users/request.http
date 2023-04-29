@@ -6,3 +6,21 @@ Content-Type: application/json
     "email":"123@gmail.com",
     "password":"1234"
 }
+
+###Find a user
+GET http://localhost:3000/auth/2
+
+###Find all user
+GET http://localhost:3000/auth?email=vigneshmohan@gmail.com
+
+###Delete a user
+DELETE http://localhost:3000/auth/1
+
+
+###Update a user
+PATCH http://localhost:3000/auth/3
+Content-Type: application/json
+
+{
+    "email":"vigneshmohan@gmail.com"
+}
