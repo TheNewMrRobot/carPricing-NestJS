@@ -7,6 +7,8 @@ import {
   Patch,
   Post,
   Query,
+  UseInterceptors,
+  ClassSerializerInterceptor,
 } from '@nestjs/common';
 import { CreateUserDTO } from './dtos/create-user.dto';
 import { UsersService } from './users.service';
@@ -19,11 +21,14 @@ export class UsersController {
   createUser(@Body() body: CreateUserDTO) {
     this.userService.create(body.email, body.password);
   }
+
+  @UseInterceptors(ClassSerializerInterceptor)
   @Get('/:id')
   findUser(@Param('id') id: string) {
     return this.userService.findOne(parseInt(id));
   }
 
+  @UseInterceptors(ClassSerializerInterceptor)
   @Get()
   findAllUsers(@Query('email') email: string) {
     return this.userService.find(email);
