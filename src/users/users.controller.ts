@@ -23,8 +23,6 @@ export class UsersController {
     this.userService.create(body.email, body.password);
   }
 
-  // @UseInterceptors(new SerializeInterceptor(UserDto))
-  // @Serialize(UserDto)
   @Get('/:id')
   findUser(@Param('id') id: string) {
     return this.userService.findOne(parseInt(id));
