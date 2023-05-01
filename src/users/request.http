@@ -1,3 +1,11 @@
+###SignIn a user
+POST http://localhost:3000/auth/signIn
+Content-Type: application/json
+
+{
+    "email":"123344@gmail.com",
+    "password":"123s4"
+}
 ###Create a user
 POST http://localhost:3000/auth/signUp
 Content-Type: application/json
