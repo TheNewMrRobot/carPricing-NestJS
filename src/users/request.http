@@ -3,10 +3,10 @@ POST http://localhost:3000/auth/signIn
 Content-Type: application/json
 
 {
-    "email":"123344@gmail.com",
-    "password":"123s4"
+    "email":"1234@gmail.com",
+    "password":"1234"
 }
-###Create a user
+###SignUp a user
 POST http://localhost:3000/auth/signUp
 Content-Type: application/json
 
@@ -15,6 +15,10 @@ Content-Type: application/json
     "password":"1234"
 }
 
+###SignOut
+POST http://localhost:3000/auth/signOut
+###Validating a user session
+GET http://localhost:3000/auth/whoAmI
 ###Find a user
 GET http://localhost:3000/auth/2
 
