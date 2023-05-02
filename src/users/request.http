@@ -1,12 +1,24 @@
-###Create a user
+###SignIn a user
+POST http://localhost:3000/auth/signIn
+Content-Type: application/json
+
+{
+    "email":"1234@gmail.com",
+    "password":"1234"
+}
+###SignUp a user
 POST http://localhost:3000/auth/signUp
 Content-Type: application/json
 
 {
-    "email":"123@gmail.com",
+    "email":"1234@gmail.com",
     "password":"1234"
 }
 
+###SignOut
+POST http://localhost:3000/auth/signOut
+###Validating a user session
+GET http://localhost:3000/auth/whoAmI
 ###Find a user
 GET http://localhost:3000/auth/2
 

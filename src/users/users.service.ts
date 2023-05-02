@@ -14,6 +14,9 @@ export class UsersService {
     return this.repo.save(user);
   }
   findOne(id: number) {
+    if (!id) {
+      return null;
+    }
     return this.repo.findOneBy({ id });
   }
   find(email: string) {
@@ -36,6 +39,6 @@ export class UsersService {
       throw new Error('No User Found');
     }
     // remove is work with ENTITY & delete is work with Plain Objects
-    return this.repo.remove(user)
+    return this.repo.remove(user);
   }
 }
